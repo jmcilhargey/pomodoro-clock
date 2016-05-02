@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Clock</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="pomodoroApp">
+  <div class="wrapper">
+    <div class="header">
+      <div class="row">
+        <div class="col-sm-6">
+          <h1>Pomodoro Timer</h1>
+        </div>
+        <div class="col-sm-6">
+          <a class="btn btn-primary" href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">About</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main" ng-controller="MainController">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Work Time</p><br>
+          <button ng-click="workChange(1)"><i class="fa fa-plus"></i></button>
+          <p>{{ workTime }}</p>
+          <button ng-click="workChange(-1)"><i class="fa fa-minus"></i></button>
+        </div>
+        <div class="col-sm-6">
+          <p>Break Time</p><br>
+          <button ng-click="breakChange(1)"><i class="fa fa-plus"></i></button>
+          <p>{{ breakTime }}</p>
+          <button ng-click="breakChange(-1)"><i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+
+      <div class="leaf"></div>
+
+      <div class="tomato" ng-click="startTimer()">
+        <p>{{ timeLeft }}</p>
+        <span class="fill"></span>
+      </div>
+      
+      </div>
+    </div>
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
